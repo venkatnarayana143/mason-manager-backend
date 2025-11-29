@@ -22,6 +22,10 @@ public class AttendanceService {
         return attendanceRepository.findByDate(date);
     }
 
+    public List<Attendance> getAttendanceByEmployeeId(Long employeeId) {
+        return attendanceRepository.findByEmployeeId(employeeId);
+    }
+
     public Attendance markAttendance(Attendance attendance) {
         return attendanceRepository.save(attendance);
     }

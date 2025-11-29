@@ -23,8 +23,14 @@ public class AttendanceController {
     }
 
     @GetMapping("/date/{date}")
-    public List<Attendance> getAttendanceByDate(@PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date) {
+    public List<Attendance> getAttendanceByDate(
+            @PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date) {
         return attendanceService.getAttendanceByDate(date);
+    }
+
+    @GetMapping("/employee/{employeeId}")
+    public List<Attendance> getAttendanceByEmployeeId(@PathVariable Long employeeId) {
+        return attendanceService.getAttendanceByEmployeeId(employeeId);
     }
 
     @PostMapping
