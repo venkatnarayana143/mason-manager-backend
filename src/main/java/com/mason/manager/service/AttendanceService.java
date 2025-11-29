@@ -27,6 +27,15 @@ public class AttendanceService {
     }
 
     public Attendance markAttendance(Attendance attendance) {
+        Attendance existing = attendanceRepository.findByEmployeeIdAndDate(
+                attendance.getEmployee().getId(),
+                attendance.getDate());
+
+        if (existing != null) {
+            existing.setStatus(attendance.getStatus());
+            return attendanceRepository.save(existing);
+        }
+
         return attendanceRepository.save(attendance);
     }
 }
