@@ -1,0 +1,2 @@
+Build Timestamp: 2025-11-29 14:55
+This file exists solely to force Railway to detect a change in the src directory and rebuild the JAR.

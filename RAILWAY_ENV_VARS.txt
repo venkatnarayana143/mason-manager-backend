@@ -1,0 +1,16 @@
+RAILWAY ENVIRONMENT VARIABLES
+==============================
+
+Copy and paste these into Railway Dashboard > Your Service > Variables tab:
+
+DD_API_KEY=18ccc2a978ad181de5193a50e41aaecc
+DD_APP_KEY=057988ba935a6fd1dcac285a44bb1a1ead4c4a8a
+DD_SITE=datadoghq.com
+DD_SERVICE=mason-manager
+DD_ENV=production
+DD_VERSION=1.0.0
+
+Note: DATABASE_URL will be automatically provided by Railway when you connect the PostgreSQL database.
+
+OPTIONAL (add later after frontend deployment):
+FRONTEND_URL=http://localhost:5173
